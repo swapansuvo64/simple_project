@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { auth } from '../firebase.init';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-
+import '../App.css';
 
 const Log = () => {
     const [email, setEmail] = useState('');

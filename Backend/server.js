@@ -9,11 +9,7 @@ const cors = require('cors');
 const app = express();
 
 // Enable CORS
-app.use(cors({
-    origin: 'http://localhost:3000', // Your frontend URL
-    credentials: true, // Allow credentials (cookies, authorization headers, etc.)
-}));
-
+app.use(cors());
 app.use(express.json());
 
 // MongoDB Atlas Connection
