@@ -58,7 +58,9 @@ const imageSchema = new mongoose.Schema({
 });
 
 const Image = mongoose.model('Image', imageSchema);
-
+app.get('/', (req, res) => {
+    res.send('Hello World'); // Send "Hello World" as the response
+});
 // Image upload route
 app.post('/image-upload', upload.single('image'), async (req, res) => {
     try {

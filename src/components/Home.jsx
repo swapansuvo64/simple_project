@@ -32,7 +32,7 @@ const Home = () => {
         formData.append('description', 'Description of the uploaded image'); // Customize this as needed
 
         try {
-            const response = await fetch('http://localhost:5000/image-upload', {
+            const response = await fetch('http://15.207.100.237:8000/image-upload', {
                 method: 'POST',
                 body: formData,
             });
@@ -52,7 +52,7 @@ const Home = () => {
 
     const fetchImages = async () => {
         try {
-            const response = await fetch('http://localhost:5000/images');
+            const response = await fetch('http://15.207.100.237:8000/images');
             if (!response.ok) {
                 throw new Error('Failed to fetch images');
             }
@@ -65,7 +65,7 @@ const Home = () => {
 
     const incrementViewCount = async (imageId) => {
         try {
-            const response = await fetch(`http://localhost:5000/images/${imageId}`, {
+            const response = await fetch(`http://15.207.100.237:8000/images/${imageId}`, {
                 method: 'GET',
             });
             if (!response.ok) {
@@ -81,7 +81,7 @@ const Home = () => {
     const handleDelete = async (imageId) => {
         if (window.confirm('Are you sure you want to delete this image?')) {
             try {
-                const response = await fetch(`http://localhost:5000/images/${imageId}`, {
+                const response = await fetch(`http://15.207.100.237:8000/images/${imageId}`, {
                     method: 'DELETE',
                 });
 
